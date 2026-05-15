@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<main>
+    <section class="featured">
+        
+        <div class="character-detail">
+
+            <h2><%= characters.name %></h2>
+
+            <p><strong>Race:</strong> <%= characters.race %></p>
+            <p><strong>Homeland:</strong> <%= characters.homeland %></p>
+            <p><strong>Weapon:</strong> <%= characters.weapon %></p>
+            <a href="/characters">Back to Characters</a>
+        </div>
+    </section>
+</main>
+<%- include('partials/footer') %>

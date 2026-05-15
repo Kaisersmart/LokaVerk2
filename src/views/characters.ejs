@@ -1,0 +1,41 @@
+<%- include('partials/header') %>
+<main>
+
+    <section class="featured">
+        <h1>Characters</h1>
+
+        <div class="card-grid">
+            <% if (characters && characters.length > 0) { %>
+                <% characters.forEach(character => { %>
+
+                    <div class="character-card">
+                        <div class="card-info">
+
+                            <h4><%= character.name %></h4>
+                            <p>Race: <%= character.race %></p>
+                            <p>Homeland: <%= character.homeland %></p>
+                            <p>Weapon: <%= character.weapon %></p>
+                            <a href="/characters/<%= character.id %>">
+                                View Details
+                            </a>
+                            </div>
+                            </div>
+                    <% }) %>
+
+                 <% } else { %>
+
+                <div class="character-card">
+                    <div class="card-info">
+
+                        <h4>No characters found</h4>
+                        <p>Add characters to database.</p>
+
+                    </div>
+                </div>
+            <% } %>
+        </div>
+
+    </section>
+</main>
+
+<%- include('partials/footer') %>
