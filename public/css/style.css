@@ -217,4 +217,53 @@ footer p:hover {
   margin: 0 auto;
 }
 
+/* add characters form */
+.character-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #e6da09;
+  border: 3px solid #333;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.character-form label {
+  color: #333;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.character-form input {
+  padding: 12px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f5f5f5;
+}
+
+.character-form input:focus {
+  outline: none;
+}
+
+.character-form button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #333;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.character-form button:hover {
+  background-color: white;
+  color: #333;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -221,3 +221,52 @@ footer p:hover {
   max-width: 500px;
   margin: 0 auto;
 }
+
+/* add characters form */
+.character-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: $accent-color;
+  border: 3px solid $main-color;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.character-form label {
+  color: $main-color;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.character-form input {
+  padding: 12px;
+  border: 2px solid $main-color;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: $text-light;
+}
+
+.character-form input:focus {
+  outline: none;
+}
+
+.character-form button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: $main-color;
+  color: $text-light;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.character-form button:hover {
+  background-color: white;
+  color: $main-color;
+}

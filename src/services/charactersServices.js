@@ -19,7 +19,19 @@ const getCharacterById = async (id) => {
     return result.rows[0];
 };
 
+const createCharacter = async (name, race, homeland, weapon) => {
+    const result = await db.query(
+        `INSERT INTO characters (name, race, homeland, weapon)
+         VALUES ($1, $2, $3, $4)
+         RETURNING *`,
+        [name, race, homeland, weapon]
+    );
+
+    return result.rows[0];
+};
+
 module.exports = {
     getAllCharacters,
-    getCharacterById
+    getCharacterById,
+    createCharacter
 };

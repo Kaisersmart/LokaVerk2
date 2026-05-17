@@ -38,7 +38,34 @@ const getCharactersDetail = async (req, res) => {
     }
 };
 
+const getNewCharacterForm = (req, res) => {
+    res.render('add-character', {
+        title: 'Add Character'
+    });
+};
+
+const createCharacter = async (req, res) => {
+    try {
+        const { name, race, homeland, weapon } = req.body;
+
+        const newCharacter = await charactersServices.createCharacter(
+            name,
+            race,
+            homeland,
+            weapon
+        );
+
+        res.redirect(`/characters/${newCharacter.id}`);
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Server error");
+    }
+};
+
 module.exports = {
     getHomePage,
-    getCharactersDetail
+    getCharactersDetail,
+    getNewCharacterForm,
+    createCharacter
 };
